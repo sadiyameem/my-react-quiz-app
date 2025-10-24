@@ -37,7 +37,7 @@ body {
   gap: 12px;
 }
 
-.quiz-botton {
+.quiz-button {
   padding: 12px;
   border: none;
   border-radius: 8px;
@@ -50,6 +50,21 @@ body {
 
 .quiz-button:hover {
   background-color: #d35400;
+}
+
+.next-button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.next-button:hover {
+  background-color: darkgreen;
 }
 
 

@@ -45,6 +45,8 @@ function App() {
                             {option.answerText}
                         </button>
                     ))}
+                    <button className="next-button">Next Question</button>
+                    
                 </div>
             </div>
         </div>
