@@ -50,16 +50,15 @@ function App() {
         <div className="app-container">
             <div className="quiz-box">
                 <h1>About Me Quiz App</h1>
-                <p className="question-text">{questions[0].questionText}</p>
+                <p className="question-text">{questions[currentQuestion].questionText}</p>
                 <div className="answer-section">
-                    {questions[0].answerOptions.map((option, index) => (
+                    {questions[currentQuestion].answerOptions.map((option, index) => (
                         <button key={index} className="quiz-button">
                             {option.answerText}
                         </button>
                     ))}
-                    <button className="next-button">Next Question</button>
+                    <button className="next-button" onClick={handleNextQuestion}>Next Question</button>
                     <p className="number-of-questions">Question {currentQuestion + 1} of {questions.length}</p>
-                    <p className="question-text"></p>
                 </div>
             </div>
         </div>
