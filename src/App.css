@@ -1,10 +1,10 @@
 body {
-  background-color: black;
+  background-color: #fef6e4;
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
-.app-comtainer {
+.app-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,8 +12,8 @@ body {
 }
 
 .quiz-box {
-  background-color: lightblue;
-  padding: 30px;
+  background-color: #4a90e2;
+  padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 12px black;
   text-align: center;
@@ -21,28 +21,37 @@ body {
   color: white;
 }
 
-.quix-box h1 {
+.quiz-box h1 {
+  margin-bottom: 25px;
+  color: #ffeb3b;
+}
+
+.question-text {
+  font-size: 20px;
   margin-bottom: 20px;
-  color: yellow;
 }
 
-.quiz-box p {
-  font-size: 18px;
-  margin-bottom: 15px;
+.answer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.quiz-bottom {
-  display: block;
-  width: 80%;
-  padding: 10px;
-  margin: 10px auto;
+.quiz-botton {
+  padding: 12px;
   border: none;
   border-radius: 8px;
-  background-color: orange;
+  background-color: #f39c12;
   color: white;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
+
+.quiz-button:hover {
+  background-color: #d35400;
+}
+
 
 
 
