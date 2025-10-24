@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -34,6 +34,18 @@ function App() {
         },
     ];
 
+    // State to track which question is showing
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+
+    // Move to next question
+    const handleNextQuestion = () => {
+        if (currentQuestion < questions.length - 1) {
+            setCurrentQuestion(currentQuestion + 1);
+        } else {
+            alert('You reached the end of the quiz!');
+        }
+    };
+
     return (
         <div className="app-container">
             <div className="quiz-box">
@@ -46,7 +58,8 @@ function App() {
                         </button>
                     ))}
                     <button className="next-button">Next Question</button>
-                    
+                    <p className="number-of-questions">Question {currentQuestion + 1} of {questions.length}</p>
+                    <p className="question-text"></p>
                 </div>
             </div>
         </div>
