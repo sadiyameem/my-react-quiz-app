@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 
 function App() {
 
@@ -36,12 +37,16 @@ const questions = [
     },
 ]
     return (
-        <div className="App">
+        <div className="app-container">
+            <div className="quiz-box">
+                <h1>About Me Quiz App</h1>
+            </div>
             <div>
-                <div>Quiz App</div>
-                <div>{questions[0].questionText}</div>
-                {questions[0].answerOptions.map((option, index) =>(
-                    <button>{option.answerText}</button>
+                <p>{questions[0].questionText}</p>
+                {questions[0].answerOptions.map((option, index) => (
+                    <button key={index} className="quiz-button">
+                        {option.answerText}
+                    </button>
                 ))}
             </div>
         </div>
