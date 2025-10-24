@@ -37,8 +37,22 @@ function App() {
     // State to track which question is showing
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
+    // track selected answer
+    const [selectedAnswer, setSelectAnswer] = useState(null);
+
+    // Wrong or Right answer
+    const handleAnswerClick = (isCorrect, index) => {
+        setSelectAnswer(index);
+        if (isCorrect) {
+            alert('Correct');
+        } else {
+            alert('Wrong');
+        }
+    }
+
     // Move to next question
     const handleNextQuestion = () => {
+        setSelectAnswer(null); // reset for next
         if (currentQuestion < questions.length - 1) {
             setCurrentQuestion(currentQuestion + 1);
         } else {
@@ -52,11 +66,21 @@ function App() {
                 <h1>About Me Quiz App</h1>
                 <p className="question-text">{questions[currentQuestion].questionText}</p>
                 <div className="answer-section">
-                    {questions[currentQuestion].answerOptions.map((option, index) => (
-                        <button key={index} className="quiz-button">
-                            {option.answerText}
-                        </button>
-                    ))}
+                    {questions[currentQuestion].answerOptions.map((option, index) => 
+                    <button
+                    key={index}
+                className={`quiz-button ${
+                    selectedAnswer === index 
+                    ? option.isCorrect 
+                    ? 'correct'
+                    : 'wrong'
+                    : ''
+                }`}
+            onClick={() => handleAnswerClick(option.isCorrect, index)} 
+                >
+                {option.answerText}
+                </button>
+            )}
                     <button className="next-button" onClick={handleNextQuestion}>Next Question</button>
                     <p className="number-of-questions">Question {currentQuestion + 1} of {questions.length}</p>
                 </div>
