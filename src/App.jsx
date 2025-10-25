@@ -40,25 +40,45 @@ function App() {
     // track selected answer
     const [selectedAnswer, setSelectAnswer] = useState(null);
 
-    // Wrong or Right answer
+    // track score
+    const [score, setScore] = useState(0);
+    const [showScore, setShowScore] = useState(false);
+
     const handleAnswerClick = (isCorrect, index) => {
         setSelectAnswer(index);
         if (isCorrect) {
+            setScore(score +1);
             alert('Correct');
         } else {
             alert('Wrong');
         }
-    }
+    };
 
-    // Move to next question
     const handleNextQuestion = () => {
-        setSelectAnswer(null); // reset for next
+        setSelectAnswer(null);
         if (currentQuestion < questions.length - 1) {
             setCurrentQuestion(currentQuestion + 1);
         } else {
-            alert('You reached the end of the quiz!');
+            setShowScore(true);
         }
     };
+
+    //if quiz is finshed show the score
+    if (showScore) {
+        return (
+            <div className="app-container">
+                <div className="quiz-box">
+                    <h1>Quiz Done!</h1>
+                    <p>You scored {score} out of {questions.length}</p>
+                    <button className="next-button" onClick={() => {
+                        setCurrentQuestion(0);
+                        setScore(0);
+                        setShowScore(false);
+                    }}>Restart Quiz</button>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className="app-container">
