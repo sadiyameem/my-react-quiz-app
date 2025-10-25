@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
+// main quiz part
 function App() {
     const questions = [
         {
@@ -29,7 +30,7 @@ function App() {
                 {answerText: 'Arias', isCorrect: false},
                 {answerText: 'Pisces', isCorrect: true},
                 {answerText: 'Leo', isCorrect: false},
-                {answerText: 'Cancer', isCorrect: true},
+                {answerText: 'Cancer', isCorrect: false},
             ],
         },
 
@@ -57,73 +58,35 @@ function App() {
             questionText: 'Where am I from?',
             answerOptions: [
                 {answerText: 'Canada', isCorrect: false},
-                {answerText: 'Texas', isCorrect: true},
+                {answerText: 'Texas', isCorrect: false},
                 {answerText: 'NYC', isCorrect: true},
                 {answerText: 'Florida', isCorrect: false},
             ],
         },
-
-        {
-            questionText: 'When is my birthday month?',
-            answerOptions: [
-                {answerText: 'March', isCorrect: true},
-                {answerText: 'June', isCorrect: false},
-                {answerText: 'October', isCorrect: true},
-                {answerText: 'December', isCorrect: false},
-            ],
-        },
-
-        {
-            questionText: 'What is my favorite animal?',
-            answerOptions: [
-                {answerText: 'Dogs', isCorrect: false},
-                {answerText: 'Ducks', isCorrect: false},
-                {answerText: 'Cats', isCorrect: true},
-                {answerText: 'Bunnies', isCorrect: false},
-            ],
-        },
-
-        {
-            questionText: 'What is my favorite fast food item to eat?',
-            answerOptions: [
-                {answerText: 'Fries', isCorrect: true},
-                {answerText: 'Burgers', isCorrect: false},
-                {answerText: 'Fried Chicken', isCorrect: false},
-                {answerText: 'Wraps', isCorrect: false},
-            ],
-        },
-
-        {
-            questionText: 'What is my favorite season?',
-            answerOptions: [
-                {answerText: 'Winter', isCorrect: false},
-                {answerText: 'Fall', isCorrect: true},
-                {answerText: 'Summer', isCorrect: false},
-                {answerText: 'Spring', isCorrect: false},
-            ],
-        },
     ];
 
-    // State to track which question is showing
+    // state to track which question is showing
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
     // track selected answer
     const [selectedAnswer, setSelectAnswer] = useState(null);
 
-    // track score
+    // trck score
     const [score, setScore] = useState(0);
     const [showScore, setShowScore] = useState(false);
 
+    // when the user selects an answer
     const handleAnswerClick = (isCorrect, index) => {
         setSelectAnswer(index);
         if (isCorrect) {
             setScore(score +1);
-            alert('Correct');
+            alert('Correct!');
         } else {
             alert('Wrong');
         }
     };
 
+    // move to the next question
     const handleNextQuestion = () => {
         setSelectAnswer(null);
         if (currentQuestion < questions.length - 1) {
@@ -133,7 +96,7 @@ function App() {
         }
     };
 
-    //if quiz is finshed show the score
+    // if quiz is finished show the score
     if (showScore) {
         return (
             <div className="app-container">
@@ -150,29 +113,30 @@ function App() {
         )
     }
 
+    // main quiz layout
     return (
         <div className="app-container">
             <div className="quiz-box">
-                <h1>About Me Quiz App</h1>
+                <h1>About Me Quiz</h1>
                 <p className="question-text">{questions[currentQuestion].questionText}</p>
                 <div className="answer-section">
-                    {questions[currentQuestion].answerOptions.map((option, index) => 
+                    {questions[currentQuestion].answerOptions.map((option, index) =>
                     <button
                     key={index}
                 className={`quiz-button ${
-                    selectedAnswer === index 
+                    selectedAnswer === index
                     ? option.isCorrect 
                     ? 'correct'
                     : 'wrong'
-                    : ''
+                    : ""
                 }`}
-            onClick={() => handleAnswerClick(option.isCorrect, index)} 
-                >
-                {option.answerText}
-                </button>
-            )}
-                    <button className="next-button" onClick={handleNextQuestion}>Next Question</button>
-                    <p className="number-of-questions">Question {currentQuestion + 1} of {questions.length}</p>
+            onClick={() => handleAnswerClick(option.isCorrect, index)}
+        >
+            {option.answerText}
+        </button>
+    )}
+    <button className="next-button" onClick={handleNextQuestion}>Next Question</button>
+    <p className="number-of-questions">Question {currentQuestion + 1} of {questions.length}</p>
                 </div>
             </div>
         </div>
