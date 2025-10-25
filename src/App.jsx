@@ -37,8 +37,8 @@ function App() {
             questionText: 'How old am I?',
             answerOptions: [
                 {answerText: '16', isCorrect: false},
-                {answerText: '18', isCorrect: true},
-                {answerText: '17', isCorrect: false},
+                {answerText: '18', isCorrect: false},
+                {answerText: '17', isCorrect: true},
                 {answerText: '15', isCorrect: false},
             ],
         },
@@ -60,6 +60,46 @@ function App() {
                 {answerText: 'Texas', isCorrect: true},
                 {answerText: 'NYC', isCorrect: true},
                 {answerText: 'Florida', isCorrect: false},
+            ],
+        },
+
+        {
+            questionText: 'When is my birthday month?',
+            answerOptions: [
+                {answerText: 'March', isCorrect: true},
+                {answerText: 'June', isCorrect: false},
+                {answerText: 'October', isCorrect: true},
+                {answerText: 'December', isCorrect: false},
+            ],
+        },
+
+        {
+            questionText: 'What is my favorite animal?',
+            answerOptions: [
+                {answerText: 'Dogs', isCorrect: false},
+                {answerText: 'Ducks', isCorrect: false},
+                {answerText: 'Cats', isCorrect: true},
+                {answerText: 'Bunnies', isCorrect: false},
+            ],
+        },
+
+        {
+            questionText: 'What is my favorite fast food item to eat?',
+            answerOptions: [
+                {answerText: 'Fries', isCorrect: true},
+                {answerText: 'Burgers', isCorrect: false},
+                {answerText: 'Fried Chicken', isCorrect: false},
+                {answerText: 'Wraps', isCorrect: false},
+            ],
+        },
+
+        {
+            questionText: 'What is my favorite season?',
+            answerOptions: [
+                {answerText: 'Winter', isCorrect: false},
+                {answerText: 'Fall', isCorrect: true},
+                {answerText: 'Summer', isCorrect: false},
+                {answerText: 'Spring', isCorrect: false},
             ],
         },
     ];
