@@ -22,4 +22,7 @@ A challenge was to learn react (since this is new to me)
 - https://htmlcolorcodes.com/color-picker/ --> Helped me pick colors
 - https://www.youtube.com/watch?v=bCZBwi1Dg08 --> Helped me make this
 
+# Link
+https://sadiyameem.github.io/my-react-quiz-app/
+
 Created by Sadiya
