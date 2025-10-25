@@ -19,7 +19,7 @@ I learned how to use React and make a quiz about myself.
 A challenge was to learn react (since this is new to me)
 
 # Credits
-https://htmlcolorcodes.com/color-picker/ --> Helped me pick colors
-https://www.youtube.com/watch?v=bCZBwi1Dg08 --> Helped me make this
+- https://htmlcolorcodes.com/color-picker/ --> Helped me pick colors
+- https://www.youtube.com/watch?v=bCZBwi1Dg08 --> Helped me make this
 
 Created by Sadiya
