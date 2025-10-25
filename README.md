@@ -2,7 +2,7 @@
 
 # Description
 This is a quiz to get to know me. Users can answer multiple choice questions, get feedback if it's right or wrong, and view thier total score at the end.
-This is made using React.
+This is made using React + Vite.
 
 # Features
 - Multiple-choice questions (6 questions)
