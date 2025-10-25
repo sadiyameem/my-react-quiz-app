@@ -32,6 +32,36 @@ function App() {
                 {answerText: 'Cancer', isCorrect: true},
             ],
         },
+
+        {
+            questionText: 'How old am I?',
+            answerOptions: [
+                {answerText: '16', isCorrect: false},
+                {answerText: '18', isCorrect: true},
+                {answerText: '17', isCorrect: false},
+                {answerText: '15', isCorrect: false},
+            ],
+        },
+
+        {
+            questionText: 'What grade am I in?',
+            answerOptions: [
+                {answerText: '11th', isCorrect: false},
+                {answerText: '12th', isCorrect: true},
+                {answerText: '10th', isCorrect: false},
+                {answerText: '9th', isCorrect: false},
+            ],
+        },
+
+        {
+            questionText: 'Where am I from?',
+            answerOptions: [
+                {answerText: 'Canada', isCorrect: false},
+                {answerText: 'Texas', isCorrect: true},
+                {answerText: 'NYC', isCorrect: true},
+                {answerText: 'Florida', isCorrect: false},
+            ],
+        },
     ];
 
     // State to track which question is showing
