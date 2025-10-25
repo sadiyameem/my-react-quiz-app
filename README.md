@@ -21,6 +21,7 @@ A challenge was to learn react (since this is new to me)
 # Credits
 - https://htmlcolorcodes.com/color-picker/ --> Helped me pick colors
 - https://www.youtube.com/watch?v=bCZBwi1Dg08 --> Helped me make this
+- The Odin Project helped me set up React
 
 # Link
 https://sadiyameem.github.io/my-react-quiz-app/
