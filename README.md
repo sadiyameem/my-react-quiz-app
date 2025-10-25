@@ -1,20 +1,25 @@
-<<<<<<< HEAD
-# React + Vite
+# About Me Quiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Description
+This is a quiz to get to know me. Users can answer multiple choice questions, get feedback if it's right or wrong, and view thier total score at the end.
+This is made using React.
 
-Currently, two official plugins are available:
+# Features
+- Multiple-choice questions (6 questions)
+- Feedback (Alerts say if it's correct or wrong)
+- Score (Shows total score)
+- Restart button
+- Blue themed
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Motivation
+I made this because I wanted to make a quiz because I made one in GWC and decided to try it in Athena but couldn't and I used the feedback that I got from my projects and decided to try something new.
 
-## React Compiler
+# Challenges/Learned
+I learned how to use React and make a quiz about myself.
+A challenge was to learn react (since this is new to me)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Credits
+https://htmlcolorcodes.com/color-picker/ --> Helped me pick colors
+https://www.youtube.com/watch?v=bCZBwi1Dg08 --> Helped me make this
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# my-react-quiz-app
->>>>>>> 0691d2f168a1b3b37549ac5100fd8193b4b84b7e
+Created by Sadiya
